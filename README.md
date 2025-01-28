@@ -34,7 +34,7 @@ A dynamic and user-friendly notes application built with React and styled with T
 
 2. Navigate to the project directory:
    ```bash
-   cd Notes-Ap
+   cd Notes-App
    ```
 
 3. Install dependencies:
