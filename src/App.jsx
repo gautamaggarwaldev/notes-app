@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css'
 import CreateNote from './components/CreateNote';
 import SearchNote from './components/SearchNote';
+import NotesList from './components/NotesList';
 
 function App() {
 
@@ -12,9 +13,7 @@ function App() {
 
   return (
     <>
-      Notes App
-      <CreateNote />
-      <SearchNote />
+   
     </>
   )
 }
