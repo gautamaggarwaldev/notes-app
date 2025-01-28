@@ -19,34 +19,23 @@ function SearchNote({ setNotes }) {
     }
 
     return (
-        <form onSubmit={(e) => handleSearch(e)}>
-            <label htmlFor='search'>
+        <form
+            onSubmit={(e) => handleSearch(e)}
+            className="flex items-center gap-2 bg-white p-4 rounded-md shadow-md"
+        >
+            <input
+                type="text"
+                id="search"
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="Enter Note Title"
+                className="flex-grow border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-200"
+            />
+            <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            >
                 Search
-            </label>
-
-            <div>
-                <svg
-                    className='h-8 w-8'
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                >
-                    <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                    />
-                </svg>
-            </div>
-
-            <input type='text' id='search' onChange={(e) => setTitle(e.target.value)} placeholder='Enter Note Title' />
-
-            <button type='submit'>Search</button>
-
-
+            </button>
         </form>
     )
 }
